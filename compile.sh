@@ -27,7 +27,6 @@ EXT_RECURSIONGUARD_VERSION="0.1.0"
 EXT_LIBDEFLATE_VERSION="0.1.0"
 EXT_MORTON_VERSION="0.1.2"
 EXT_XXHASH_VERSION="0.1.1"
-EXT_VANILLAGENERATOR_VERSION="56fc48ea1367e1d08b228dfa580b513fbec8ca31"
 EXT_ZSTD_VERSION="0.11.0"
 
 function write_out {
@@ -861,8 +860,6 @@ if [ "$HAVE_LEGACY_CHUNKUTILS" != "" ]; then
 	get_github_extension "legacy-chunkutils" "$EXT_LEGACY_CHUNKUTILS_VERSION" "pmmp" "PocketMine-C-ChunkUtils"
 fi
 
-get_github_extension "vanillagenerator" "$EXT_VANILLAGENERATOR_VERSION" "NetherGamesMC" "ext-vanillagenerator"
-
 echo -n "[PHP]"
 
 if [ "$DO_OPTIMIZE" != "no" ]; then
@@ -991,7 +988,6 @@ $HAVE_MYSQLI \
 --enable-opcache-jit=$HAVE_OPCACHE \
 --enable-zstd \
 --enable-igbinary \
---enable-vanillagenerator \
 --with-crypto \
 --enable-recursionguard \
 --enable-xxhash \
